@@ -1,0 +1,36 @@
+<ul>
+    <li *ngFor="let comida of comidas">
+        <a routerLink="/comida/{{comida.id}}">
+        <img [src]="comida.imagenUrl" [alt]="comida.nombre"> <!--Pasar data dinamica-->
+        <div class="content">
+            <div class="name">
+                {{comida.nombre}}
+            </div>
+            <span class="favorite {{comida.favorito?'':'not'}}">
+                ❤
+            </span>
+              <!-- Usando star rating se añade la valoracion de la comida -->
+            <div class="stars">
+                <star-rating [value]="comida.estrellas" [totalstars]="5"  checkedcolor="red" uncheckedcolor="black"  size="22px"
+                [readonly]="true">
+            </star-rating>
+            </div>
+           
+            <div class="restaurant">
+                {{comida.restaurante}}
+            </div>
+            <div class="cook-time">
+                <span>🕒</span>
+                {{comida.tiempo}}
+            </div>
+
+            <div class="price">
+                <span>
+                  {{comida.precio | currency}}
+                </span>
+            </div>
+        </div>
+       
+        </a>
+    </li>
+</ul>
