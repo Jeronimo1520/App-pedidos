@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -19,6 +20,7 @@ import { RatingModule } from 'ng-starrating';
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    SearchComponent,
     
 
 

@@ -1,3 +1,4 @@
+<app-search></app-search>
 <ul>
     <li *ngFor="let comida of comidas">
         <a routerLink="/comida/{{comida.id}}">
@@ -6,9 +7,9 @@
             <div class="name">
                 {{comida.nombre}}
             </div>
-            <span class="favorite {{comida.favorito?'':'not'}}">
+            <!-- <span class="favorite {{comida.favorito?'':'not'}}">
                 ❤
-            </span>
+            </span> -->
               <!-- Usando star rating se añade la valoracion de la comida -->
             <div class="stars">
                 <star-rating [value]="comida.estrellas" [totalstars]="5"  checkedcolor="red" uncheckedcolor="black"  size="22px"
@@ -17,7 +18,7 @@
             </div>
            
             <div class="restaurant">
-                {{comida.restaurante}}
+                {{comida.local}}
             </div>
             <div class="cook-time">
                 <span>🕒</span>

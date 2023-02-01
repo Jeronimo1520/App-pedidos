@@ -7,5 +7,5 @@ export class Comida{
      estrellas!:number;
      imagenUrl!: string;
      tiempo!:string;
-     restaurante!:string;
+     local!:string;
 }

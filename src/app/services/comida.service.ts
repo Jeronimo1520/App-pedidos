@@ -12,4 +12,8 @@ export class ComidaService {
   getAll():Comida[]{ //Obtener todas las comidas
     return comida_ejemplos;
   } 
+
+  getAllComidasBySearch(searchTerm:string){
+    return this.getAll().filter(comida => comida.nombre.toLowerCase().includes(searchTerm.toLowerCase()))
+  }
 }
