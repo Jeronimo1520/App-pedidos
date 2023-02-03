@@ -1,0 +1,39 @@
+<div class="container">
+    <img [src]="comida.imagenUrl" [alt]="comida.nombre">
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{comida.nombre}}
+            </span>
+        </div>
+        <div class="stars">
+            <star-rating [value]="comida.estrellas" [totalstars]="5"  checkedcolor="red" uncheckedcolor="black"  size="22px" [readonly]="true"></star-rating>
+        </div>
+        <div class="etiquetas">
+            <span *ngFor="let etiqueta of comida.etiquetas">
+                {{etiqueta}}
+            </span>
+        </div>
+        <div class="local">
+            <span>
+                Local: {{comida.local}}
+            </span>
+        </div>
+        <div class="cook-time">
+            <span>
+                Tiempo de preparación aproximadamente <strong>{{comida.tiempo}}</strong> 
+            </span>
+        </div>
+        <div class="price">
+            <span>
+
+                {{comida.precio | currency}}
+            </span>
+        </div>
+
+        <button (click)="addToCanasta()">
+            Añadir a la canasta
+        </button>
+    </div>
+</div>

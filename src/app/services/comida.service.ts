@@ -14,6 +14,11 @@ export class ComidaService {
   } 
 
   getAllComidasBySearch(searchTerm:string){
-    return this.getAll().filter(comida => comida.nombre.toLowerCase().includes(searchTerm.toLowerCase()))
+    return this.getAll().filter(comida => (comida.nombre).toLowerCase().includes(searchTerm.toLowerCase()))
+  }
+
+  getComidaById(comidaId:string):Comida{
+    return this.getAll().find(comida => comida.id == comidaId)
+    ?? new Comida() //knowledge coelesing mark
   }
 }

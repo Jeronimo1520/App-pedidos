@@ -9,7 +9,7 @@ export const comida_ejemplos: Comida[] = [
     favorito: false,
     estrellas: 4.5,
     imagenUrl: 'assets/pizza-pepperoni.jpg',
-    etiquetas: ['Comida rapida', 'Pizza', 'italiana'],
+    etiquetas: ['Comida rápida', 'Pizza', 'italiana'],
     local: 'Papa Jeffs'
    },
 
@@ -21,7 +21,7 @@ export const comida_ejemplos: Comida[] = [
     favorito: true,
     estrellas: 3.5,
     imagenUrl: 'assets/hamburgueza-especial.jpg',
-    etiquetas: ['Comida rapida', 'Hamburgueza'],
+    etiquetas: ['Comida rápida', 'Hamburgueza'],
     local: 'Hamburguezas El Corralito'
    },
 
@@ -33,7 +33,7 @@ export const comida_ejemplos: Comida[] = [
     favorito: false,
     estrellas: 4.8,
     imagenUrl: 'assets/sushi-california.jpg',
-    etiquetas: ['Comida rapida', 'asiatico'],
+    etiquetas: ['Comida rápida', 'asiático', 'Japonés'],
     local: 'Saryu Japon'
    },
 
@@ -45,7 +45,7 @@ export const comida_ejemplos: Comida[] = [
     favorito: true,
     estrellas: 4.0,
     imagenUrl: 'assets/pollo-frito.jpg',
-    etiquetas: ['Comida rapida', 'pollo', 'papas fritas'],
+    etiquetas: ['Comida rápida', 'pollo', 'papas fritas'],
     local: 'Frosby'
 
    },

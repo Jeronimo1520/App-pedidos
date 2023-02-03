@@ -16,9 +16,9 @@
                     </div>
                 </li>
                 <li>
-                    <a routerLink="/panel-carrito">  <span class="material-symbols-outlined shopping-cart">
+                    <a routerLink="/canasta-page">  <span class="material-symbols-outlined shopping-cart">
                         shopping_cart_checkout
-                        </span><span class="span-cart">3</span></a>
+                        </span> <span *ngIf="canastaCantidad" class="span-cart">{{canastaCantidad}}</span></a>
                 </li>
             </ul>
         </nav>
