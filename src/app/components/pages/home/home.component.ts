@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { ComidaService } from 'src/app/services/comida.service';
 import { Comida } from 'src/app/shared/models/Comida';
 
@@ -13,11 +14,16 @@ export class HomeComponent implements OnInit {
 
   comidas:Comida[] = []; //Guarda lda data que obtengamos del servicio
   constructor(private comidaService: ComidaService, activatedRoute:ActivatedRoute ) { //Usamos el servicio para usar el metodo getAll
+    let comidasObservable: Observable<Comida[]>;
     activatedRoute.params.subscribe((params) =>{
       if(params['searchTerm'])
-      this.comidas = this.comidaService.getAllComidasBySearch(params['searchTerm']);
+      comidasObservable = this.comidaService.getAllComidasBySearch(params['searchTerm']);
       else
-      this.comidas = comidaService.getAll()
+      comidasObservable = comidaService.getAll()
+
+      comidasObservable.subscribe((serverComidas) =>{
+        this.comidas = serverComidas
+      })
     })
    
   }

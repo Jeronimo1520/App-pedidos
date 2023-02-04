@@ -1,6 +1,9 @@
 <app-titulo title="Canasta" margin="1.5rem 0 0 2.5rem"></app-titulo>
-
-<div class="container">
+<app-not-found [visible] = "!canasta || !canasta.items.length"
+notFoundMensaje = "Canasta vacía"
+resetLinkText = "Ir a la pantalla principal">
+</app-not-found>
+<div *ngIf="canasta && canasta.items.length > 0"class="container">
     <ul>
         <li *ngFor="let canastaItem of canasta.items">
             <div>
