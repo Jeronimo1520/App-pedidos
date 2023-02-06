@@ -35,8 +35,9 @@ li img{
     width: 5rem;
     height: 5rem;
     border-radius: 100rem;
-    object-fit: cover;
-}
+     object-fit: cover;
+} 
+
 
 li div{
     padding: 1rem;

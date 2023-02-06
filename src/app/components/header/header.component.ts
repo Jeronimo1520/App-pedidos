@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CanastaService } from 'src/app/services/canasta.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { CanastaService } from 'src/app/services/canasta.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
   canastaCantidad = 0
   constructor(canastaService:CanastaService) {
     canastaService.getCanastaObservable().subscribe((nuevaCanasta) =>{

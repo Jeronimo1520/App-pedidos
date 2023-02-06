@@ -3,7 +3,6 @@ export class Comida{
      nombre!:string;
      precio!:number;
      etiquetas?: string[];
-     favorito!:boolean;
      estrellas!:number;
      imagenUrl!: string;
      tiempo!:string;

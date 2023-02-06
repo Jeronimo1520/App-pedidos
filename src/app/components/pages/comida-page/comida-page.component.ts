@@ -15,7 +15,9 @@ export class ComidaPageComponent implements OnInit {
     private canastaService:CanastaService, private router: Router) {
     activatedRoute.params.subscribe((params) =>{
       if(params['id'])
-      this.comida = comidaService.getComidaById(params['id']);
+      comidaService.getComidaById(params['id']).subscribe(serverComidas =>{
+        this.comida = serverComidas
+      });
     })
    }
 
