@@ -13,9 +13,8 @@ import { SearchComponent } from './components/search/search.component';
 import { ComidaPageComponent } from './components/pages/comida-page/comida-page.component';
 import { CanastaPageComponent } from './components/pages/canasta-page/canasta-page.component';
 import { TituloComponent } from './components/partials/titulo/titulo.component';
-
-
-
+import { LoginComponent } from './login/login.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -27,8 +26,9 @@ import { TituloComponent } from './components/partials/titulo/titulo.component';
     ComidaPageComponent,
     CanastaPageComponent,
     TituloComponent,
+    LoginComponent,
+    RegistroComponent,
     
-
 
   ],
   imports: [
