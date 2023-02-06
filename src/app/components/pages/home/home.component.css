@@ -17,6 +17,7 @@ li a{ /*Envuelve a cada cuadro de comida, */
     flex-direction: column;
     overflow: hidden;
     color: #e72929;
+    background-color: lightgray;
   }
 
 li a img{ /*Organiza todas las imagenes a un mismo tamano*/
@@ -59,6 +60,7 @@ li a:hover{
     color: #414141;
     margin-top: 0.7rem;
     font-size: 1.1rem;
+    background-color: lightgray;
 }
 
 .cook-time{

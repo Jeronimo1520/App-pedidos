@@ -11,7 +11,7 @@ import { Comida } from 'src/app/shared/models/Comida';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  visible = false;
   comidas:Comida[] = []; //Guarda lda data que obtengamos del servicio
   constructor(private comidaService: ComidaService, activatedRoute:ActivatedRoute ) { //Usamos el servicio para usar el metodo getAll
     let comidasObservable: Observable<Comida[]>;

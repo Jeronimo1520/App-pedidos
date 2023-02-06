@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="content">
+      <app-titulo title="Pedido" fontSize="1.6rem"></app-titulo>
+      <!-- <form [formGroup]="checkoutForm">
+        <app-text-input [control]="fc.name" label="Name"></app-text-input>
+        <app-text-input [control]="fc.address" label="Address"></app-text-input>
+      </form> -->
+      <app-pedido-lista-items [pedido]="pedido"></app-pedido-lista-items>
+    </div>
+    <div class="map">
+      <app-titulo
+      title="Escoge tu dirección en el mapa"
+      fontSize="1.6rem"></app-titulo>
+
+      <app-mapa></app-mapa>
+
+    <div class="buttons-container">
+      <div class="buttons">
+        <button (click)="crearPedido()">
+          Ir al pago
+        </button>
+      </div>
+    </div>
+  </div>

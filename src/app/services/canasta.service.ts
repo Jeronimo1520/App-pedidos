@@ -45,6 +45,10 @@ export class CanastaService {
     return this.canastaSubject.asObservable();
   }
 
+  getCanasta():Canasta{
+    return this.canastaSubject.value //obtener el ultimo canasta
+  }
+
   //Usaremos este metodo para guardar en el local storage
   private setCanastaToLocalStorage():void{
     this.canasta.precioTotal = this.canasta.items.reduce((prevSum, currentItem)=> prevSum + currentItem.precio,0)
