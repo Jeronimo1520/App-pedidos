@@ -1,3 +1,5 @@
+
+
 ul{
   display: flex;
   justify-content: center;
@@ -5,6 +7,7 @@ ul{
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  
 }
 
 li a{ /*Envuelve a cada cuadro de comida, */
@@ -53,15 +56,20 @@ li a:hover{
 
 .price{
     position: absolute;
-    bottom: 0.1;
+    bottom: 0.5;
     left: 0.9rem;
     background: white;
     padding: 0.3rem 100% 0 0;
     color: #414141;
-    margin-top: 0.7rem;
+    margin-top: 0rem;
     font-size: 1.1rem;
     background-color: lightgray;
+    margin-bottom: 0.2rem;
+  
 }
+/* .price span{
+  padding-bottom:10;
+} */
 
 .cook-time{
     font-size: 0.9rem;

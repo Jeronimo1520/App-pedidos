@@ -3,33 +3,43 @@
 
     <div class="container">
         <div class="row">
-            <div class="col bg">
+            <div class="col bg imagen">
 
             </div>
             <br/>
             <br/>
             <div class="col ">
                 <h2 class="fw-bold text-center py-5">Bienvenido a Rappidito</h2>
-                <form>
-            
+                <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                    
                     <div class="mb-4">
-                        <label for="email" class="form-label">Correo Eléctronico</label>
-                        <input type="email" name="email" placeholder="Correo electronico" class="form-control">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <div>
+                            <input class="form-control" type="email" placeholder="Correo electrónico" formControlName="email">
+                        </div>
+                        <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
+                            <div *ngIf="fc['email'].errors['required']">Por favor llene el campo</div>
+                            <div *ngIf="fc['email'].errors['email']">El Correo no es correcto</div>
+                        </div>
                     </div>
+                 
                     <br/>
                     <div class="mb-4">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" name="password" placeholder="Contraseña" class="form-control">
-                    </div>
-                    <br/>
-                    <div class="d-grid">
-                        <button type="submit" name="boton" class="btn btn-primary">Iniciar Sesión</button>
+                        <input type="password" name="password" placeholder="Contraseña" class="form-control" formControlName="password">
                     </div>
 
-                    <div class="my-3">
-                        <span>No tienes una cuenta? <a routerLink="/registro"> Registrate</a></span>
+                    <div class="error-list" *ngIf="fc['password'].errors && isSubmitted">
+                        <div *ngIf="fc['password'].errors['required']">Por favor llene el campo</div>
+                    </div>
+                    <div class="d-grid button" >
+                        <button type="submit" name="boton" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                 </form>
+                
+                <div class="my-3">
+                    <span>No tienes una cuenta? <a routerLink="/registro"> Registrate</a></span>
+                </div>
             </div>
             </div>
         </div>

@@ -1,3 +1,4 @@
+<app-header></app-header>
 <app-search></app-search>
 <app-not-found [visible]="!comidas || !comidas.length"
 resetLinkText="Volver a busqueda"
@@ -10,10 +11,6 @@ resetLinkText="Volver a busqueda"
             <div class="name">
                 {{comida.nombre}}
             </div>
-            <!-- <span class="favorite {{comida.favorito?'':'not'}}">
-                ❤
-            </span> -->
-              <!-- Usando star rating se añade la valoracion de la comida -->
             <div class="stars">
                 <star-rating [value]="comida.estrellas" [totalstars]="5"  checkedcolor="red" uncheckedcolor="black"  size="22px"
                 [readonly]="true">

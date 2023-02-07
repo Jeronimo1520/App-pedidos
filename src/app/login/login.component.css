@@ -8,4 +8,18 @@ button{
     background-position: center center;
 }
 
+.container{
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+}
 
+.imagen{
+    padding-right: 5rem;
+}
+
+.col{
+    margin-left: 2rem;
+}
