@@ -1,18 +1,19 @@
 <!-- <p>header works!</p> -->
 <header>
     <div class="container">
-        <a routerLink="/" class="logo">Rappidito</a>
+        <a routerLink="/Home" class="logo">Rappidito</a>
         <nav>
             <ul>
-                <li>
+                <li *ngIf="!usuario
+                .token">
                     <a routerLink="/login">Login</a>
                 </li>
                 <li class="menu-container">
-                    <a routerLink="/dashboard">Jero</a>
+                    <a routerLink="/dashboard">{{usuario.nombre}}</a>
                     <div class="menu">
-                        <a routerLink="/perfil">Perfil</a>
+                        <!-- <a routerLink="/perfil">Perfil</a> -->
                         <a routerLink="/pedidos">Pedidos</a>
-                        <a>Cerrar Sesión</a>
+                        <a (click)="logout()">Cerrar Sesión</a>
                     </div>
                 </li>
                 <li>

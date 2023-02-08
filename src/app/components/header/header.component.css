@@ -17,9 +17,11 @@ a:hover{
 }
 
 .container{
-    margin: 0 auto;
+    margin:0;
     display: flex;
     justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0px;
 }
 
 a.logo{
@@ -31,6 +33,7 @@ ul{
     display: flex;
     list-style-type: none; /*Quita los puntos negros de cada*/
     margin: 0;
+    
 }
 
 ul a{
@@ -41,7 +44,7 @@ ul a{
 .span-cart{
     background: #ff7c64;
     color: white;
-    padding: 0.1rem 0.45rem; /* top-bottom, left-rigth*/
+    padding: 0.1rem 0.3rem; /* top-bottom, left-rigth*/
     border-radius: 100rem;
     font-size: 0.9rem;
 }
@@ -65,3 +68,4 @@ ul a{
     width: 100%;
     min-width: 8rem;
 }
+

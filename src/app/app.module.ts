@@ -21,7 +21,8 @@ import { InputContainerComponent } from './components/partials/input-container/i
 import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MapaComponent } from './components/partials/mapa/mapa.component';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -46,11 +47,14 @@ import { MapaComponent } from './components/partials/mapa/mapa.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     RatingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule
+  
 
   
   ],
