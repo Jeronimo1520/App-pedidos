@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
     })
 
-    this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl']; //Ultimo valor deactivadtedRoute
+    // this.returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl']; //Ultimo valor deactivadtedRoute
   }
 
   get fc(){
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
   
     this.usuarioService.login({email:this.fc['email'].value,
     password:this.fc['password'].value}).subscribe(()=>{
-      this.router.navigateByUrl(this.returnUrl);
+      this.router.navigateByUrl("/Home");
     });
   }
 
