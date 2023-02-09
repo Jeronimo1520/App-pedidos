@@ -3,41 +3,43 @@
     <br/>
     <br/>
     <div class="container">
-        <form class="row">
+        <form [formGroup]="formRegistro"class="row" (ngSubmit)="submit()">
             <div class="col-6">
-                <label for="Nombre" class="form-label">Nombre completo:</label>
-                <input type="email" class="form-control" id="Email" placeholder="Ingrese su nombre completo">
+                <label for="Nombre" class="form-label" >Nombre completo:</label>
+                <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre completo">
+                
             </div>
             <div class="col-6">
                 <label for="EmailRegistro" class="form-label">Correo eléctronico:</label>
-                <input type="email" class="form-control" id="Email" placeholder="Ingrese su correo eléctronico">
+                <input formControlName="correo" type="email" class="form-control" id="Email" placeholder="Ingrese su correo eléctronico">
             </div>
+            
            
             <div class="col-6">
                 <br/>
                 <br/>
                 <label for="Telefono" class="form-label">Teléfono:</label>
-                <input type="telefono" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono">
+                <input formControlName="telefono" type="telefono" class="form-control" id="telefono" placeholder="Ingrese su número de teléfono">
             </div>
 
             <div class="col-6">
                 <br/>
                 <br/>
-                <label for="Telefono" class="form-label">Cuidad:</label>
-                <input type="ciudad" class="form-control" id="ciudad" placeholder="Ingrese la cuidad donde vive">
+                <label for="Telefono" class="form-label">Ciudad :</label>
+                <input formControlName="ciudad" type="ciudad" class="form-control" id="ciudad" placeholder="Ingrese la cuidad donde vive">
             </div>
             
             <div class="col-6">
                 <br/>
                 <br/>
                 <label for="Password" class="form-label">Contraseña:</label>
-                <input type="password" class="form-control" id="password" placeholder="Crea una contraseña">
+                <input formControlName="password" type="password" class="form-control" id="password" placeholder="Crea una contraseña">
             </div>
             <div class="col-6">
                 <br/>
                 <br/>
                 <label for="Confirmacion" class="form-label">Confirmar contraseña:</label>
-                <input type="password" class="form-control" id="Cpassword" placeholder="Confirme su contraseña">
+                <input formControlName="confirmarPassword" type="password" class="form-control" id="password" placeholder="Confirme su contraseña">
             </div>
             <div class="my-3">
                 <br/>

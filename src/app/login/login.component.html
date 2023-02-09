@@ -15,11 +15,11 @@
                     <div class="mb-4">
                         <label for="email" class="form-label">Correo electrónico</label>
                         <div>
-                            <input class="form-control" type="email" placeholder="Correo electrónico" formControlName="email">
+                            <input class="form-control" type="email" placeholder="Correo electrónico" formControlName="correo">
                         </div>
-                        <div class="error-list" *ngIf="fc['email'].errors && isSubmitted">
-                            <div *ngIf="fc['email'].errors['required']">Por favor llene el campo</div>
-                            <div *ngIf="fc['email'].errors['email']">El Correo no es correcto</div>
+                        <div class="error-list" *ngIf="fc['correo'].errors && isSubmitted">
+                            <div *ngIf="fc['correo'].errors['required']">Por favor llene el campo</div>
+                            <div *ngIf="fc['correo'].errors['correo']">El Correo no es correcto</div>
                         </div>
                     </div>
                  
